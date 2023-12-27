@@ -13,7 +13,7 @@ def main(dir_path):
         # Get the old folder name
         old_name = os.path.join(dir_path, folder)
         # Lower case the folder name and replace spaces with underscores
-        new_name = os.path.join(dir_path, folder.lower().replace(" ", "_").replace(".", "_"))
+        new_name = os.path.join(dir_path, folder.lower().replace(" ", "_").replace(".", "_").replace(",","_").replace("__","-").replace("--","-"))
         # Rename the folder
         os.rename(old_name, new_name)
 
